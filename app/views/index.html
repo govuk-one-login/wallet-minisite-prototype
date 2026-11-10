@@ -2,19 +2,159 @@
 
 {% set pageName="Home" %}
 
-{% block content %}
+{% block main %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+<main class="govuk-main-wrapper govuk-!-padding-top-0" id="main-content">
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+  <div class="govuk-width-container wallet-hero-container">
+    <section class="wallet-hero">
 
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
+      <div class="wallet-hero__content">
+        <div class="wallet-hero__content-inner">
 
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+          <h1 class="govuk-heading-xl wallet-hero__heading">
+            GOV.UK Wallet: your docs &amp; ID
+          </h1>
+
+          <p class="govuk-body-l wallet-hero__description">
+            Prove your identity with GOV.UK One Login, then save and share documents
+          </p>
+
+        </div>
+      </div>
+
+      <div class="wallet-hero__media">
+        <img class="wallet-hero__image" src="/public/images/wallet-hero.png" alt="">
+      </div>
+
+    </section>
   </div>
-</div>
+
+  <div class="govuk-width-container govuk-!-static-padding-top-5">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <p> GOV.UK Wallet helps you prove things about yourself using government-issued documents like your driving
+          licence, securely stored on your phone. </p>
+        <p> The app can also be used to prove your identity for GOV.UK One Login, used to sign in to many government
+          services. </p>
+        <p> Helping you safely share the information needed to get things done. </p>
+
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full govuk-!-margin-top-8">
+        
+        <h2 class="govuk-heading-l govuk-!-padding-top-3 feature--grid">
+          Featured
+        </h2>
+
+        <div class="govuk-grid-row govuk-!-static-margin-top-6">
+
+          <div class="govuk-grid-column-one-third">
+            
+            <div class="wallet-image-card">
+              <img class="wallet-image-card__image" src="/public/images/get-started.png" alt="">
+
+              <div class="wallet-image-card__content">
+                <h2 class="govuk-heading-s wallet-image-card__heading">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state">
+                    Get started with GOV.UK Wallet
+                  </a>
+                </h2>
+                <p class="govuk-body">
+                  Supporting information about the content goes here.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+            <div class="wallet-image-card">
+
+              <img class="wallet-image-card__image" src="/public/images/secured.png" alt="">
+
+              <div class="wallet-image-card__content">
+                <h2 class="govuk-heading-s wallet-image-card__heading">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state">
+                    Secured by GOV.UK One Login 
+                  </a>
+                </h2>
+                <p class="govuk-body">
+                  Supporting information about the content goes here.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+          
+
+          <div class="govuk-grid-column-one-third">
+            <div class="wallet-image-card">
+              <img class="wallet-image-card__image" src="/public/images/where-to-use.png" alt="">
+
+              <div class="wallet-image-card__content">
+                <h2 class="govuk-heading-s wallet-image-card__heading">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state">
+                    Where you can use GOV.UK Wallet 
+                  </a>
+                </h2>
+                <p class="govuk-body">
+                  Supporting information about the content goes here.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+            <div class="wallet-image-card">
+              <img class="wallet-image-card__image" src="/public/images/where-to-use.png" alt="">
+
+              <div class="wallet-image-card__content">
+                <h2 class="govuk-heading-s wallet-image-card__heading">
+                  <a href="#" class="govuk-link govuk-link--no-visited-state">
+                    Where you can use GOV.UK Wallet 
+                  </a>
+                </h2>
+                <p class="govuk-body">
+                  Supporting information about the content goes here.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+          
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+</main>
 
 {% endblock %}

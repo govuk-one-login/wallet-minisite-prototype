@@ -4,3 +4,23 @@ https://prototype-kit.service.gov.uk/how-to-use-layouts/
 #}
 
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block govukServiceNavigation %}
+  {{ govukServiceNavigation({
+    serviceName: serviceName,
+    navigation: [
+      {
+        href: "#",
+        text: "Get started"
+      },
+      {
+        href: "#",
+        text: "Security"
+      },
+      {
+        href: "#",
+        text: "Businesses"
+      }
+    ]
+  }) }}
+{% endblock %}

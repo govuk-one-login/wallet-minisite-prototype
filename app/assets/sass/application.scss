@@ -4,3 +4,120 @@
 // 
 
 // Add extra styles here
+
+/* Parent hero section */
+
+.wallet-hero {
+  display: flex;
+  width: 100%;
+  background: govuk-colour("white");
+}
+
+.wallet-hero__content,
+.wallet-hero__media {
+  width: 50%;
+}
+
+.wallet-hero__content {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  padding-top: govuk-spacing(8);
+  padding-bottom: govuk-spacing(8);
+  padding-right: govuk-spacing(8);
+}
+
+.wallet-hero__content-inner {
+  width: 100%;
+  max-width: 620px;
+}
+
+.wallet-hero__heading {
+  margin-bottom: govuk-spacing(6);
+}
+
+.wallet-hero__description {
+  max-width: 600px;
+  margin-bottom: 0;
+}
+
+.wallet-hero__media {
+  display: flex;
+  overflow: hidden;
+  background-color: #d2e2f1;
+}
+
+.wallet-hero__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* Parent hero section - Mobile */
+
+@include govuk-media-query($until: tablet) {
+
+  .wallet-hero {
+    display: block;
+  }
+
+  .wallet-hero__content,
+  .wallet-hero__media {
+    width: 100%;
+  }
+
+  // The govuk-width-container already provides the page gutter,
+  // so don't add another horizontal gutter here.
+  .wallet-hero__content {
+    padding: govuk-spacing(6) 0;
+  }
+
+  .wallet-hero__content-inner {
+    width: 100%;
+    max-width: none;
+  }
+
+  .wallet-hero__heading {
+    margin-bottom: govuk-spacing(4);
+  }
+
+  // Break the image out of the GOV.UK container so it is full-bleed.
+  .wallet-hero__media {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+
+  .wallet-hero__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+// FEATURE CARDS
+
+.wallet-image-card {
+  height: 100%;
+}
+
+.wallet-image-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wallet-image-card__content {
+  padding-top: govuk-spacing(4);
+}
+
+.wallet-image-card__heading {
+  margin-bottom: govuk-spacing(2);
+}
+
+
+.feature--grid {
+  border-top: 5px solid govuk-colour("black");
+}
