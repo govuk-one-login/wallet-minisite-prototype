@@ -7,20 +7,107 @@ https://prototype-kit.service.gov.uk/how-to-use-layouts/
 
 {% block govukServiceNavigation %}
   {{ govukServiceNavigation({
-    serviceName: serviceName,
+    serviceName: "GOV.UK Wallet",
+    serviceUrl: "/index.html",
     navigation: [
       {
-        href: "#",
-        text: "Get started"
+        href: "/get-started.html",
+        text: "Get started",
+        active: (pageName == "Get started")
       },
       {
         href: "#",
-        text: "Security"
+        text: "Security",
+        active: (pageName == "Security")
       },
       {
         href: "#",
-        text: "Businesses"
+        text: "Businesses",
+        active: (pageName == "Businesses")
       }
     ]
   }) }}
+{% endblock %}
+
+{% block footer %}
+  {# Pre-footer section placed directly above the standard GOV.UK footer #}
+  <section class="wallet-pre-footer" aria-label="Related organisations and social links">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+
+        {# Left column: Who's involved #}
+        <div class="govuk-grid-column-two-thirds">
+          <div class="wallet-pre-footer__section wallet-pre-footer__section--organisations">
+            <h2 class="govuk-heading-l wallet-pre-footer__heading">Who's involved</h2>
+
+            <ul class="govuk-list wallet-org-list">
+              <li class="wallet-org-list__item wallet-org-list__item--gds">
+                <span class="wallet-org-list__crest wallet-org-list__crest--gds" aria-hidden="true"></span>
+                <p>
+                  <a href="https://www.gov.uk/government/organisations/government-digital-service">
+                  Government Digital Service
+                  </a>
+              </p>
+              </li>
+
+              <li class="wallet-org-list__item wallet-org-list__item--ofdia">
+                <span class="wallet-org-list__crest wallet-org-list__crest--ofdia" aria-hidden="true"></span>
+                <p>
+                <a href="https://www.gov.uk/government/organisations/office-for-digital-identities-and-attributes">
+                  Office for Digital Identities & Attributes
+                </a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {# Right column: Follow us #}
+        <div class="govuk-grid-column-one-third">
+          <div class="wallet-pre-footer__section wallet-pre-footer__section--social">
+            <h2 class="govuk-heading-l wallet-pre-footer__heading">Follow us</h2>
+            <p class="govuk-body govuk-!-margin-bottom-4">The following links open in a new tab</p>
+
+            <ul class="govuk-list wallet-social-list">
+              {# <li class="wallet-social-list__item">
+                <svg class="wallet-social-list__icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                  <path fill="#1D70B8" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                <a href="https://x.com" class="govuk-link" target="_blank" rel="noreferrer noopener">X</a>
+              </li> #}
+              <li class="wallet-social-list__item">
+                <svg class="wallet-social-list__icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                  <path fill="#1D70B8" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                <a href="https://facebook.com" class="govuk-link" target="_blank" rel="noreferrer noopener">Facebook</a>
+              </li>
+              <li class="wallet-social-list__item">
+                <svg class="wallet-social-list__icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                  <path fill="#1D70B8" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                <a href="https://youtube.com" class="govuk-link" target="_blank" rel="noreferrer noopener">Youtube</a>
+              </li>
+              <li class="wallet-social-list__item">
+                <svg class="wallet-social-list__icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                  <circle cx="5.5" cy="12" r="5.5" fill="#1D70B8"/>
+                  <circle cx="18.5" cy="12" r="5.5" fill="#1D70B8"/>
+                </svg>
+                <a href="https://flickr.com" class="govuk-link" target="_blank" rel="noreferrer noopener">Flickr</a>
+              </li>
+              <li class="wallet-social-list__item">
+                <svg class="wallet-social-list__icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                  <path fill="#1D70B8" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+                <a href="https://linkedin.com" class="govuk-link" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {# This renders the standard default GOV.UK black footer underneath #}
+  {{ super() }}
 {% endblock %}

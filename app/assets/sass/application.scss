@@ -6,7 +6,6 @@
 // Add extra styles here
 
 /* Parent hero section */
-
 .wallet-hero {
   display: flex;
   width: 100%;
@@ -56,7 +55,6 @@
 
 
 /* Parent hero section - Mobile */
-
 @include govuk-media-query($until: tablet) {
 
   .wallet-hero {
@@ -96,9 +94,7 @@
   }
 }
 
-
 // FEATURE CARDS
-
 .wallet-image-card {
   height: 100%;
 }
@@ -111,13 +107,94 @@
 
 .wallet-image-card__content {
   padding-top: govuk-spacing(4);
+  padding-bottom: govuk-spacing(3);
 }
 
 .wallet-image-card__heading {
   margin-bottom: govuk-spacing(2);
 }
 
-
 .feature--grid {
   border-top: 5px solid govuk-colour("black");
+}
+
+// Pre-footer Section
+.wallet-pre-footer {
+  margin-top: govuk-spacing(8);
+  padding-bottom: govuk-spacing(8);
+
+  // Black bar over each column matching the image
+  &__heading {
+    border-top: 5px solid govuk-colour("black");
+    padding-top: govuk-spacing(3);
+    margin-bottom: govuk-spacing(6);
+  }
+}
+
+// Organisation List with Left Coloured Borders
+.wallet-org-list {
+  &__item {
+    position: relative;
+    padding-left: govuk-spacing(3);
+    margin-bottom: govuk-spacing(6);
+    border-left: 2px solid govuk-colour("black"); // Fallback
+
+    // GOV.UK Department branding accent colours
+    &--gds {
+      border-left-color: #16EEEE;
+    }
+
+    &--ofdia {
+      border-left-color: #ED1588;
+    }
+
+    a {
+      color: govuk-colour("black");
+
+      &:hover {
+        color: $govuk-link-hover-colour;
+      }
+    }
+  }
+
+  &__crest {
+    display: block;
+    width: 34px;
+    height: 25px;
+    margin-bottom: govuk-spacing(1);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+
+    // Coat of arms / crest placeholder
+    &--gds {
+      background-image: url("/public/images/gds-crest.png");
+    }
+
+    &--ofdia {
+      background-image: url("/public/images/ofdia-crest.png");
+    }
+  }
+}
+
+// Social Media List
+.wallet-social-list {
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: govuk-spacing(4);
+
+    a {
+      font-size: 19px;
+      font-weight: 700;
+      color: govuk-colour("blue");
+      margin-left: govuk-spacing(2);
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+  }
 }

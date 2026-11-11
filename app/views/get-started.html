@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName = "Get started" %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="impact-header">
+          <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Get started with GOV.UK Wallet</h1>
+          <p class="govuk-body-l">
+            GOV.UK Wallet is an app that lets you securely save your government documents to your phone.
+          </p>
+        </div>
+        <div class="govspeak govuk-!-margin-top-6">
+          <p>You can use these documents to prove things such as your age, identity or eligibility for services.</p>
+          <p>Use of GOV.UK Wallet is entirely optional.</p>
+
+          <h2 class="govuk-heading-l">How to get GOV.UK Wallet</h2>
+          <p>On a smartphone, you can download the GOV.UK Wallet app from the:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="https://www.apple.com/uk/app-store/" target="_blank" rel="noopener noreferrer" class="govuk-link govuk-link--no-visited-state">App Store</a>
+              on an iPhone
+            </li>
+            <li>
+              <a href="https://play.google.com/store/games" target="_blank" rel="noopener noreferrer" class="govuk-link govuk-link--no-visited-state">Google Play Store</a>
+              on an Android phone
+            </li>
+          </ul>
+          <p>If you’re using an iPhone, it must be:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>an iPhone 8 or newer</li>
+            <li>running iOS 16.7 or higher</li>
+          </ul>
+          <p>For an Android phone (for example, Samsung or Google Pixel), it must be running Android 10 or higher.</p>
+
+          <h2 class="govuk-heading-l">Documents you can add</h2>
+          <p>You must already hold a government document to add it to your GOV.UK Wallet.</p>
+          <p>You can currently add a digital version of your:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>UK driving licence, if you live in <a href="https://www.gov.uk" target="_blank"
+                rel="noopener noreferrer" class="govuk-link govuk-link--no-visited-state">selected postcode areas in Aberdeen, Cardiff and Newcastle</a></li>
+            <li>HM Armed Forces Veteran Card</li>
+          </ul>
+          <p>In future you’ll be able to add more government documents to the app.</p>
+
+          <h2 class="govuk-heading-l">What you cannot add</h2>
+          <p>You can only add government documents to GOV.UK Wallet. You cannot add other things, like payment cards,
+            boarding passes or concert tickets.</p>
+          <p>You can only add your own documents. You cannot add documents that belong to other people, such as members
+            of your family.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

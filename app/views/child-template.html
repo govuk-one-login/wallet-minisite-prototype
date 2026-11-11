@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Child" %}
+{% set pageName = "Child template" %}
 
 {% block content %}
 
@@ -8,8 +8,15 @@
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Title (max 65 characters)</h1>
-        <p class="govuk-body-l">Lead paragraph (max 160 characters)</p>
+        <div class="impact-header">
+          <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Title (max 65 characters)</h1>
+          <p class="govuk-body-l">
+            Lead paragraph (max 160 characters)
+          </p>
+        </div>
+        <div class="govspeak govuk-!-margin-top-6">
+          <p>Govspeak content would go here.</p>
+        </div>
       </div>
     </div>
   </main>
